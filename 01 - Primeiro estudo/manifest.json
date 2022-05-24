@@ -1,0 +1,23 @@
+{
+    "name": "Conversor números",
+    "version": "1.0",
+    "description": "Transforma números em dias trabalhados",
+    "browser_action":{
+        "default_popup": "index.html",
+        "default_title": "Conversor para assalariados"
+    },
+
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["https://*/*", "https://*/*"],
+            "js": ["content.js"]
+        }
+    ],
+
+    "manifest_version": 2
+}
